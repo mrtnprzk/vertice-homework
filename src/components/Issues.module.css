@@ -1,0 +1,45 @@
+h2{
+    padding: 0 2rem;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 0.5px solid #b5b5b5;
+    padding: 0.5rem 2rem;
+    height: 6rem;
+}
+
+.card a{
+    margin: 6px 0;
+    padding: 0;
+    text-decoration: none;
+    color: rgba(102, 30, 196, 0.685);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.card p{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+
+@media (max-width: 1050px) {
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.75);
+    }
+
+    .modal {
+    position: absolute;
+    z-index: 20;
+    overflow: hidden;
+    }
+}
