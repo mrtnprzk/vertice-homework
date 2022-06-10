@@ -1,22 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import classes from "./Repositories.module.css";
 import Wrapper from './UI/Wrapper';
 import Button from "./UI/Button";
 
 const Repositories = (props) => {
-
-
-  const [issueName, setIssueName] = useState("");
-
-  function clickHandler(e){
-    
-    const name = e.target.value;
-
-    setIssueName(name);
-    props.setShowIssues(true);
-    props.fetchDataIssues(issueName);
-    
-  }
 
   return (
     <Wrapper>
@@ -36,7 +23,7 @@ const Repositories = (props) => {
           </div>
           {result.has_issues ? (
             <Button
-              onClick={clickHandler}
+              onClick={props.clickHandler}
               style={{ cursor: "pointer" }}
               value={result.full_name}
             >

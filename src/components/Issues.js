@@ -3,7 +3,7 @@ import Wrapper from "./UI/Wrapper";
 import classes from "./Issues.module.css";
 
 const Issues = (props) => {
-  
+
   return (
     <>
       <div
@@ -14,10 +14,14 @@ const Issues = (props) => {
         <h2>Repository Issues</h2>
         {props.issuesResults.map((issue, index) => (
           <div className={classes.card} key={index}>
-            <a href={issue.html_url}>{issue.title}</a>
+            <a href={issue.html_url}>
+              {issue.title?.length > 60
+                ? issue.title.substring(0, 60) + "..."
+                : issue.title}
+            </a>
             <p>
-              {issue.body?.length > 230
-                ? issue.body.substring(0, 230) + "..."
+              {issue.body?.length > 180
+                ? issue.body.substring(0, 180) + "..."
                 : issue.body}
             </p>
           </div>

@@ -7,7 +7,6 @@ import "./App.css";
 function App() {
   const [searchResults, setSearchResults] = useState([]);
 
-  //fetching data
   const fetchDataSearch = async (item) => {
     try {
       const result = await axios.get(

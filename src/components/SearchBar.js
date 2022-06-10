@@ -3,7 +3,7 @@ import classes from "./SearchBar.module.css";
 
 const SearchBar = (props) => {
 
-  const [item, setItem] = useState("react");
+  const [item, setItem] = useState("");
 
   function changeHandler(e){
     setItem(e.target.value)
