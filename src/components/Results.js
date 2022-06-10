@@ -39,17 +39,9 @@ const Results = (props) => {
 
   return (
     <div className={classes.results}>
-      <Repositories
-        results={props.results}
-        setShowIssues={setShowIssues}
-        clickHandler={clickHandler}
-      />
+      <Repositories results={props.results} clickHandler={clickHandler} />
       {showIssues && (
-        <Issues
-          setShowIssues={setShowIssues}
-          issuesResults={issuesResults}
-          results={props.results}
-        />
+        <Issues setShowIssues={setShowIssues} issuesResults={issuesResults} />
       )}
     </div>
   );

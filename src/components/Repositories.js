@@ -30,7 +30,7 @@ const Repositories = (props) => {
               Show Issues
             </Button>
           ) : (
-            <Button style={{ color: "grey" }} disabled>
+            <Button style={{ color: "grey" }} >
               None Issues
             </Button>
           )}
